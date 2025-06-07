@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b6dba8c66fcd4d999e89f403093e3016" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="KonditerskayaModel.Client" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.JobPosition" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.OrderComposition" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.PaymentMethod" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.Product" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.Status" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.User" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.Warehouse" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.Employees" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.OrderFullInfo" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.WarehouseAssortment" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="KonditerskayaModel.FK_Order_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_User_JobPosition" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_Order_PaymentMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_Order_Stasus" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_OrderComposition_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_OrderComposition_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="KonditerskayaModel.FK_Warehouse_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

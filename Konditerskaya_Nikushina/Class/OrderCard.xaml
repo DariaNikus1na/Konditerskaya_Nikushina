@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Konditerskaya_Nikushina.Class.OrderCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Konditerskaya_Nikushina.Class"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="350">
+
+    <Border Background="White"
+            CornerRadius="10"
+            BorderThickness="1"
+            BorderBrush="#FF3C1B08"
+            Padding="15">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок -->
+            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                <TextBlock Text="Заказ №" Foreground="#9E9E9E" FontSize="14"/>
+                <TextBlock x:Name="ordernumberComtainer" FontWeight="SemiBold" FontSize="14"
+                           Foreground="#333"/>
+            </StackPanel>
+
+            <!-- Статус (правый верхний угол) -->
+            <Border Grid.Column="1" Grid.Row="0" CornerRadius="4" Padding="6 3">
+                <TextBlock x:Name="statusContainer" Foreground="White" FontWeight="Medium" FontSize="12"/>
+            </Border>
+
+            <!-- Основная информация -->
+            <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="0 10 0 5" FontSize="16"
+                       FontWeight="SemiBold" x:Name="clientContainer"/>
+
+
+            <DataGrid x:Name="dgItems" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0 0 0 10"/>
+
+
+            <!-- Нижний блок -->
+            <Grid Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel>
+                    <TextBlock x:Name="addressContainer"
+                               FontSize="12"
+                               Foreground="#757575"/>
+                    <TextBlock Name="dateContainer"
+                               FontSize="12"
+                               Margin="0 5 0 0"
+                               Foreground="#757575"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                    <TextBlock x:Name="employeeContainer"
+                               FontSize="12"
+                               HorizontalAlignment="Right"
+                               Foreground="#757575"/>
+                    <TextBlock x:Name="paymentmethodContainer"
+                               FontSize="12"
+                               Margin="0 5 0 0"
+                               HorizontalAlignment="Right"
+                               Foreground="#757575"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
