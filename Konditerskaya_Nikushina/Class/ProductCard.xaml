@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Konditerskaya_Nikushina.Class"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="380">
+             d:DesignHeight="400" d:DesignWidth="380">
     <Grid>
-        <Border Background="White" Height="450" Width="350" 
+        <Border Background="White" Height="390" Width="280" 
                 BorderThickness="2" CornerRadius="10"
                 ClipToBounds="True">
             <Border.BorderBrush>
@@ -20,10 +20,10 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="240"/>
-                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="110"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Border Height="230" Margin="30 10 30 8" 
+                <Border Height="230" Margin="20 10 20 8" 
                         CornerRadius="50" ClipToBounds="True">
                     <Image x:Name="imageContainer" Source="/Images/placeholder.png" 
                            Stretch="UniformToFill"
@@ -35,14 +35,13 @@
                     <TextBlock x:Name="nameContainer" Text="Название продукта" HorizontalAlignment="Center" FontSize="24"
                                FontWeight="DemiBold"/>
 
-                    <ScrollViewer Margin="10 5">
-                        <StackPanel>
-                            <TextBlock x:Name="descContainer" FontSize="18" Text="Описание" TextAlignment="Justify"
+                    <StackPanel Margin="5 0">
+                        <TextBlock x:Name="descContainer" FontSize="14" Text="Описание" TextAlignment="Justify"
                                        TextWrapping="Wrap"/>
-                            <TextBlock x:Name="ingridientsContainer" FontSize="16" Text="Состав:"
-                                       TextWrapping="Wrap" Margin="0 12"/>
-                        </StackPanel>
-                    </ScrollViewer>
+                        <TextBlock x:Name="ingridientsContainer" FontSize="13" Text="Состав:"
+                                       TextWrapping="Wrap" Margin="0 6"/>
+                    </StackPanel>
+                    
                 </StackPanel>
 
                 <TextBlock Name="expiryContainer" Text="Срок хранения:  сут." VerticalAlignment="Bottom" Grid.Row="2"

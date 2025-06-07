@@ -39,10 +39,10 @@ namespace Konditerskaya_Nikushina.Class
             employeeContainer.Text = Order.Employee;
             addressContainer.Text = Order.Address;
 
-            List<OrderComposition> list = new List<OrderComposition>();
-            foreach (var item in context.OrderComposition.ToList())
+            List<OrderCompositionInfo> list = new List<OrderCompositionInfo>();
+            foreach (var item in context.OrderCompositionInfo.ToList())
             {
-                if (item.Order_number == Order.Order_number)
+                if (item.Order == Order.Order_number)
                 {
                     list.Add(item);
                 }

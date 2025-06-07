@@ -115,6 +115,20 @@
           <Property Name="Job position" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Konditerskaya.dbo.OrderCompositionInfo" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="OrderCompositionInfo">
+          <Key>
+            <PropertyRef Name="Order item" />
+            <PropertyRef Name="Order" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="Order item" Type="int" Nullable="false" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "Konditerskaya.dbo.OrderFullInfo" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="OrderFullInfo">
           <Key>
@@ -265,6 +279,14 @@
     [Employees].[Patronymic] AS [Patronymic], 
     [Employees].[Job position] AS [Job position]
     FROM [dbo].[Employees] AS [Employees]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OrderCompositionInfo" EntityType="Self.OrderCompositionInfo" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OrderCompositionInfo].[Order item] AS [Order item], 
+    [OrderCompositionInfo].[Order] AS [Order], 
+    [OrderCompositionInfo].[Name] AS [Name], 
+    [OrderCompositionInfo].[Quantity] AS [Quantity]
+    FROM [dbo].[OrderCompositionInfo] AS [OrderCompositionInfo]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="OrderFullInfo" EntityType="Self.OrderFullInfo" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -447,6 +469,18 @@
           <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Job_position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
+        <EntityType Name="OrderCompositionInfo">
+          <Key>
+            <PropertyRef Name="Order_item" />
+            <PropertyRef Name="Order" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="Order_item" Type="Int32" Nullable="false" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="OrderFullInfo">
           <Key>
             <PropertyRef Name="Order_number" />
@@ -587,6 +621,7 @@
           <EntitySet Name="User" EntityType="Self.User" />
           <EntitySet Name="Warehouse" EntityType="Self.Warehouse" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
+          <EntitySet Name="OrderCompositionInfo" EntityType="Self.OrderCompositionInfo" />
           <EntitySet Name="OrderFullInfo" EntityType="Self.OrderFullInfo" />
           <EntitySet Name="WarehouseAssortment" EntityType="Self.WarehouseAssortment" />
           <AssociationSet Name="FK_Order_Client" Association="Self.FK_Order_Client">
@@ -740,6 +775,16 @@
                 <ScalarProperty Name="Last_name" ColumnName="Last name" />
                 <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
                 <ScalarProperty Name="Job_position" ColumnName="Job position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderCompositionInfo">
+            <EntityTypeMapping TypeName="KonditerskayaModel.OrderCompositionInfo">
+              <MappingFragment StoreEntitySet="OrderCompositionInfo">
+                <ScalarProperty Name="Order_item" ColumnName="Order item" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

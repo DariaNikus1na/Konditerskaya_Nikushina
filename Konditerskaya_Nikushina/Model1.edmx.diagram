@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b6dba8c66fcd4d999e89f403093e3016" Name="Diagram1" ZoomLevel="62">
+      <Diagram DiagramId="d5c8ea320123414dbac769768bbe1239" Name="Diagram1">
         <EntityTypeShape EntityType="KonditerskayaModel.Client" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="KonditerskayaModel.JobPosition" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="KonditerskayaModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
@@ -16,8 +16,9 @@
         <EntityTypeShape EntityType="KonditerskayaModel.User" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="KonditerskayaModel.Warehouse" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="KonditerskayaModel.Employees" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KonditerskayaModel.OrderFullInfo" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KonditerskayaModel.WarehouseAssortment" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.OrderCompositionInfo" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.OrderFullInfo" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KonditerskayaModel.WarehouseAssortment" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
         <AssociationConnector Association="KonditerskayaModel.FK_Order_Client" ManuallyRouted="false" />
         <AssociationConnector Association="KonditerskayaModel.FK_User_JobPosition" ManuallyRouted="false" />
         <AssociationConnector Association="KonditerskayaModel.FK_Order_PaymentMethod" ManuallyRouted="false" />

@@ -36,6 +36,7 @@ namespace Konditerskaya_Nikushina
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Warehouse> Warehouse { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<OrderCompositionInfo> OrderCompositionInfo { get; set; }
         public virtual DbSet<OrderFullInfo> OrderFullInfo { get; set; }
         public virtual DbSet<WarehouseAssortment> WarehouseAssortment { get; set; }
     }

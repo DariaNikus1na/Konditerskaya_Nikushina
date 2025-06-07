@@ -39,9 +39,9 @@ Margin="20" FontWeight="Bold">Авторизация</TextBlock>
                 HorizontalAlignment="Center"   
                 VerticalAlignment="Center">
             <Button x:Name="BtnLogin" FontSize="20" Margin="5" Width="100" 
-            Click="BtnLogin_Click">Войти</Button>
+            Click="BtnLogin_Click" Background="#FFFFA2C3" BorderBrush="#FF5B2C10" Foreground="#FF5B2C10" FontWeight="Bold">Войти</Button>
             <Button x:Name="BtnClose" FontSize="20" Margin="5" Width="100" 
-Click="BtnClose_Click">Закрыть</Button>
+Click="BtnClose_Click" Background="#FFFFA2C3" BorderBrush="#FF5B2C10" Foreground="#FF5B2C10" FontWeight="Bold">Закрыть</Button>
         </StackPanel>
     </Grid>
 </Window>

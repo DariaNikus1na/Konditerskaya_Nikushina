@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="DolceVita: Аналитика" Height="450" Width="800">
     <Grid>
-        
+        <Grid>
+            <TabControl>
+                <TabItem Header="Сотрудники">
+                    <ScrollViewer>
+                        <WrapPanel x:Name="EmployeePanel" HorizontalAlignment="Stretch">
+                        </WrapPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Клиенты">
+                    <DataGrid x:Name="dgClients">
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Продукция">
+                    <ScrollViewer>
+                        <WrapPanel x:Name="ProductPanel" HorizontalAlignment="Stretch">
+                        </WrapPanel>
+                    </ScrollViewer>
+
+                </TabItem>
+                <TabItem Header="Заказы">
+                    <ScrollViewer>
+                        <WrapPanel x:Name="OrderPanel" HorizontalAlignment="Stretch">
+                        </WrapPanel>
+                    </ScrollViewer>
+
+                </TabItem>
+                <TabItem Header="Склады">
+                    <ScrollViewer>
+                        <WrapPanel x:Name="WarehousePanel" HorizontalAlignment="Stretch">
+                        </WrapPanel>
+                    </ScrollViewer>
+
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>

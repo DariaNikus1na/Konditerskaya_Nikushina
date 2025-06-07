@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="DolceVita: Складской учет" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            
+            <TabItem Header="Клиенты">
+                <DataGrid x:Name="dgClients">
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Продукция">
+                <ScrollViewer>
+                    <WrapPanel x:Name="ProductPanel" HorizontalAlignment="Stretch">
+                    </WrapPanel>
+                </ScrollViewer>
+
+            </TabItem>
+            <TabItem Header="Заказы">
+                <ScrollViewer>
+                    <WrapPanel x:Name="OrderPanel" HorizontalAlignment="Stretch">
+                    </WrapPanel>
+                </ScrollViewer>
+
+            </TabItem>
+            <TabItem Header="Склады">
+                <ScrollViewer>
+                    <WrapPanel x:Name="WarehousePanel" HorizontalAlignment="Stretch">
+                    </WrapPanel>
+                </ScrollViewer>
+
+            </TabItem>
+        </TabControl>
     </Grid>
+
 </Window>
